@@ -32,9 +32,9 @@ def checkhouse(chosenhouse):
     friendlyhouse = random.randint(1, 2)
 
     if chosenhouse == str(friendlyhouse):
-        print('You see the outline of a women in old Hmong attire \n crawling towards you. You are dead!')
-    else:
         print ('You find food and water. You are safe!') 
+    else:
+        print('You see the outline of a women in old Hmong attire \n crawling towards you. You are dead!')
 
 
 displayIntro()
