@@ -13,40 +13,32 @@ def displayIntro():
     The other house has a bloodhungry spirit lurking and there is no way out.''')
 	print()
 
-def chooseCave():
-    cave = ''
-    #It looks like the indentation of the next line is not correct. 
-    # Deleting one space before 'while' on the next line would fix that:
-    while cave != '1' and cave != '2':
-            print('Which cave will you go into? (1 or 2)')
-            cave = input()
-#Looks like there is a name error for caves, try: cave
-    return cave
+def choosehouse():
+    house = ''
+    while house != '1' and house != '2':
+            print('Which house will you go into? (1 or 2)')
+            house = input()
+    return house
 
-def checkCave(chosenCave):
-    print('You approach the cave...')
-    #sleep for 2 seconds
+
+def checkhouse(chosenhouse):
+    print('You approach the house...')
     time.sleep(2)
-    print('It is dark and spooky...')
-    #sleep for 2 seconds
+    print('The door creeked open. You are inside...')
     time.sleep(3)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
+    print('The door slams behind you! In the dark...')
     print()
-    #sleep for 2 seconds
     time.sleep(2)
-    friendlyCave = random.randint(1, 2)
+    friendlyhouse = random.randint(1, 2)
 
-    if chosenCave == str(friendlyCave):
-        print('Gives you his treasure!')
-    else: #Looks like the parentheses the print call is missing. You need 
-        #to do the following:  print('Gobbles you down in one bite!') 
-        print ('Gobbles you down in one bite!') 
+    if chosenhouse == str(friendlyhouse):
+        print('You see the outline of a women in old Hmong attire \n crawling towards you. You are dead!')
+    else:
+        print ('You find food and water. You are safe!') 
 
 
 displayIntro()
-#It looks like there is a name error for choosecave(), try: chooseCave().
-caveNumber = chooseCave()
-checkCave(caveNumber)
+houseNumber = choosehouse()
+checkhouse(houseNumber)
 
-#There seems to be a grammatical error here, change the word planing to: playing    
 print("Thanks for playing")
